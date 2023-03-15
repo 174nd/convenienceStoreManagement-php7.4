@@ -1,0 +1,44 @@
+RewriteEngine on
+ErrorDocument 404 /404.php
+
+RewriteRule ^$ logme-in.php [L]
+RewriteRule ^logout/$ logme-out.php [L]
+RewriteRule ^error/$ error.php [L]
+#------------------------------------------------------------------------------------------
+
+#------------------------------------------------------------------------------------------
+RewriteRule ^admin/$ admin/main.php [L]
+
+#Barang
+RewriteRule ^admin/barang/$ admin/barang/main.php [L]
+RewriteRule ^admin/barang/([a-zA-Z0-9\-]+)$ admin/barang/main.php?id_barang=$1 [L]
+
+#Stok
+RewriteRule ^admin/stok/$ admin/stok/main.php [L]
+RewriteRule ^admin/stok/([a-zA-Z0-9\-]+)$ admin/stok/main.php?id_stok=$1 [L]
+
+#PT
+RewriteRule ^admin/pt/$ admin/pt/main.php [L]
+RewriteRule ^admin/pt/([a-zA-Z0-9\-]+)$ admin/pt/main.php?id_pt=$1 [L]
+
+#Kategori
+RewriteRule ^admin/kategori/$ admin/kategori/main.php [L]
+RewriteRule ^admin/kategori/([a-zA-Z0-9\-]+)$ admin/kategori/main.php?id_kategori=$1 [L]
+
+#Satuan
+RewriteRule ^admin/satuan/$ admin/satuan/main.php [L]
+RewriteRule ^admin/satuan/([a-zA-Z0-9\-]+)$ admin/satuan/main.php?id_satuan=$1 [L]
+
+#User
+RewriteRule ^admin/user/$ admin/user/main.php [L]
+RewriteRule ^admin/user/([a-zA-Z0-9\-]+)$ admin/user/main.php?id_user=$1 [L]
+#------------------------------------------------------------------------------------------
+
+#------------------------------------------------------------------------------------------
+RewriteRule ^kasir/$ kasir/main.php [L]
+RewriteRule ^kasir/export/surat-pinjaman/$ kasir/export/surat-pinjaman.php [L]
+#------------------------------------------------------------------------------------------
+
+#------------------------------------------------------------------------------------------
+RewriteRule ^pimpinan/$ pimpinan/main.php [L]
+RewriteRule ^pimpinan/export/surat-pinjaman/$ pimpinan/export/surat-pinjaman.php [L]
